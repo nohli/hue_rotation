@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hue_rotation.iml" filepath="$PROJECT_DIR$/hue_rotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/hue_rotation_android.iml" filepath="$PROJECT_DIR$/android/hue_rotation_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/hue_rotation_example_android.iml" filepath="$PROJECT_DIR$/example/android/hue_rotation_example_android.iml" />
+    </modules>
+  </component>
+</project>
