@@ -1,3 +1,11 @@
+## 0.2.0
+
+* Fix calculation of hue filter
+
+## 1.0.0-nullsafety.2
+
+* Fix calculation of hue filter
+
 ## 0.1.1
 
 * Apply more precise values
