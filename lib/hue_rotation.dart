@@ -25,19 +25,19 @@ class HueRotation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const List<double> matrix1 = <double>[
-      0.213, 0.715, 0.072, //
-      0.213, 0.715, 0.072,
-      0.213, 0.715, 0.072,
+      0.2127, 0.7152, 0.0722, //
+      0.2127, 0.7152, 0.0722,
+      0.2127, 0.7152, 0.0722,
     ];
     const List<double> matrix2 = <double>[
-      0.787, -0.715, -0.072, //
-      -0.213, 0.2845, -0.072,
-      -0.213, -0.715, 0.928,
+      0.7873, -0.7152, -0.0722, //
+      -0.2127, 0.2845, -0.0722,
+      -0.2127, -0.7152, 0.9278,
     ];
     const List<double> matrix3 = <double>[
-      -0.213, -0.715, 0.928, //
+      -0.2127, -0.7152, 0.9278, //
       0.143, 0.140, -0.283,
-      -0.787, 0.715, 0.072,
+      -0.7873, 0.7152, 0.0722,
     ];
 
     // https://www.w3.org/TR/filter-effects-1/#feColorMatrixElement

@@ -1,3 +1,13 @@
+## 0.1.1
+
+* Apply more precise values
+* Add lint to example
+
+## 1.0.0-nullsafety.1
+
+* Apply more precise values
+* Add lint to example
+
 ## 1.0.0-nullsafety.0
 
 * Re-publish prerelease version (with null safety)

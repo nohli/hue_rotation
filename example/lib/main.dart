@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
               child: Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 10,
-                children: <Widget>[
+                children: const <Widget>[
                   // https://daddycoding.com/2020/03/30/swiftui-huerotation/
                   _Box(color: color, degrees: -45),
                   _Box(color: color, degrees: 0),
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             _AnimatedBox(),
           ],
         ),
@@ -84,7 +84,7 @@ class _AnimatedBoxState extends State<_AnimatedBox>
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 8),
+      duration: const Duration(seconds: 8),
       vsync: this,
     );
     animation = CurvedAnimation(parent: controller, curve: Curves.easeInOut);
