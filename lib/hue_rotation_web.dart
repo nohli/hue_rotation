@@ -15,7 +15,7 @@ class HueRotationWeb {
     final MethodChannel channel = MethodChannel(
       'hue_rotation',
       const StandardMethodCodec(),
-      registrar.messenger,
+      registrar,
     );
 
     final HueRotationWeb pluginInstance = HueRotationWeb();
