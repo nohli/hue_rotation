@@ -13,7 +13,7 @@ class HueRotation extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  /// Number of [degrees] around the color circle the [child]'s color is adjusted.
+  /// [degrees] around the color circle the [child]'s color is adjusted.
   /// A value of 0 leaves the child unchanged.
   /// A value of 180 paints the complementary color.
   /// https://en.wikipedia.org/wiki/Color_wheel

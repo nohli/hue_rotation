@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Publish stable null-safe version
+
 ## 1.0.0-nullsafety.3
 
 * Remove deprecated call
