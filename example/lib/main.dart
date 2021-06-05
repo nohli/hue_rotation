@@ -76,7 +76,7 @@ class _AnimatedBox extends StatefulWidget {
 }
 
 class _AnimatedBoxState extends State<_AnimatedBox>
-    with TickerProviderStateMixin {
+    with SingleTickerProviderStateMixin {
   late final AnimationController controller;
   late final CurvedAnimation animation;
   late final Animation<double> rotation;
