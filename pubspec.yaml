@@ -1,5 +1,5 @@
 name: hue_rotation
-description: Change the color of any widget that has a color, like SwiftUI's Hue Rotation.
+description: Change the color of any widget that has a color. Like SwiftUI's Hue Rotation.
 version: 1.2.1
 homepage: https://github.com/nohli/hue_rotation
 
