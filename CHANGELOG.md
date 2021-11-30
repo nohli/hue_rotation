@@ -1,3 +1,7 @@
+## 1.2.2
+
+* Improve description
+
 ## 1.2.1
 
 * Minor updates
