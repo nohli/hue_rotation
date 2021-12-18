@@ -1,3 +1,9 @@
+## 1.2.3
+
+* Update gradle versions
+* Set `compileSdkVersion` and `targetSdkVersion` to 31 (Android 12)
+* Fix build of example app for Android 12
+
 ## 1.2.2
 
 * Improve description
