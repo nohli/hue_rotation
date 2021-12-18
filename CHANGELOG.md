@@ -1,3 +1,7 @@
+## 1.2.5
+
+* Remove unused native code of example app
+
 ## 1.2.4
 
 * Remove unused native code
