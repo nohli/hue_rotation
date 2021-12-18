@@ -3,7 +3,6 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  hue_rotation
 )
 
 set(PLUGIN_BUNDLED_LIBRARIES)
