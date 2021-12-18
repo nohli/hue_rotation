@@ -1,3 +1,7 @@
+## 1.2.6
+
+Update packages of example app
+
 ## 1.2.5
 
 * Remove unused native code of example app
