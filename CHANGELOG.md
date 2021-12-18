@@ -1,6 +1,10 @@
+## 1.2.7
+
+* Update changelog
+
 ## 1.2.6
 
-Update packages of example app
+* Update packages of example app
 
 ## 1.2.5
 
