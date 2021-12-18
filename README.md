@@ -14,8 +14,8 @@ https://pub.dev/packages/hue_rotation/example
 
 ## HueRotation in Action
 
-![Screenrecording](https://raw.githubusercontent.com/nohli/hue_rotation/master/example/assets/preview.gif)
-![Screenrecording](https://raw.githubusercontent.com/nohli/hue_rotation/master/example/assets/breathe.gif)
+![Screenrecording](https://raw.githubusercontent.com/nohli/hue_rotation/master/assets/preview.gif)
+![Screenrecording](https://raw.githubusercontent.com/nohli/hue_rotation/master/assets/breathe.gif)
 
 ## Todo
 
