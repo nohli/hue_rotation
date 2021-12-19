@@ -1,6 +1,6 @@
 name: hue_rotation
 description: Change the color of any widget that has a color. Like SwiftUI's Hue Rotation.
-version: 1.2.7
+version: 1.2.8
 homepage: https://github.com/nohli/hue_rotation
 
 environment:
@@ -9,8 +9,6 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter
-  flutter_web_plugins:
     sdk: flutter
 
 dev_dependencies:

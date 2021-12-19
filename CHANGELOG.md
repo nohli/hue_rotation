@@ -1,3 +1,7 @@
+## 1.2.8
+
+* Remove unused import of `flutter_web_plugins`
+
 ## 1.2.7
 
 * Update changelog
