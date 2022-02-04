@@ -16,5 +16,5 @@ jobs:
       - name: Publish
         uses: k-paxian/dart-package-publisher@master
         with:
-          accesscredentialJsonToken: ${{ secrets.CREDENTIALS }}
+          credentialJson: ${{ secrets.CREDENTIALS }}
           dryRunOnly: true
