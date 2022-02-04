@@ -12,7 +12,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Publish dry run
-        uses: k-paxian/dart-package-publisher@master
+        uses: k-paxian/dart-package-publisher@v1.3
         with:
           credentialJson: ${{ secrets.CREDENTIALS }}
+          flutter: true
           dryRunOnly: true
