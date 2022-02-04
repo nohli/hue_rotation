@@ -4,14 +4,14 @@ on: [push, pull_request]
 
 jobs:
 
-  publish:
+  publish-dry-run:
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Publish
+      - name: Publish dry run
         uses: k-paxian/dart-package-publisher@master
         with:
-          accesscredentialJsonToken: ${{ secrets.CREDENTIALS }}
+          credentialJson: ${{ secrets.CREDENTIALS }}
