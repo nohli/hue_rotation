@@ -1,3 +1,8 @@
+## 1.2.9
+
+* Add automated publishing via GitHub Actions
+* Update preview video
+
 ## 1.2.8
 
 * Remove unused import of `flutter_web_plugins`
