@@ -1,8 +1,8 @@
 ## Getting Started
 
-https://pub.dev/packages/hue_rotation/install
+[Installation](https://pub.dev/packages/hue_rotation/install)
 
-https://pub.dev/packages/hue_rotation/example
+[Example Code](https://pub.dev/packages/hue_rotation/example)
 
 ## About
 
