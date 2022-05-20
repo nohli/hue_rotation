@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Update `flutter_lints`
+
 ## 1.2.9
 
 * Add automated publishing via GitHub Actions
