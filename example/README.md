@@ -1,6 +1,6 @@
 # hue_rotation_example
 
-Demonstrates how to use the hue_rotation plugin.
+Demonstrates how to use the hue_rotation package.
 
 ## Getting Started
 

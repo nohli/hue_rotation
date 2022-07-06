@@ -1,5 +1,5 @@
 name: hue_rotation_example
-description: Demonstrates how to use the hue_rotation plugin.
+description: Demonstrates how to use the hue_rotation package.
 
 publish_to: 'none'
 
