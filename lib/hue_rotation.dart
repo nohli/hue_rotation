@@ -25,6 +25,8 @@ class HueRotation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double radians = degrees / 180 * pi;
+    final double cosinus = cos(radians);
+    final double sinus = sin(radians);
 
     const List<double> matrix1 = <double>[
       0.2127, 0.7152, 0.0722, //
@@ -45,8 +47,8 @@ class HueRotation extends StatelessWidget {
     // https://www.w3.org/TR/filter-effects-1/#feColorMatrixElement
     double value(int position) =>
         matrix1[position] +
-        cos(radians) * matrix2[position] +
-        sin(radians) * matrix3[position];
+        cosinus * matrix2[position] +
+        sinus * matrix3[position];
 
     final ColorFilter hueFilter = ColorFilter.matrix(<double>[
       value(0), value(1), value(2), 0, 0, //

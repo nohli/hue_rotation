@@ -1,3 +1,7 @@
+## 1.3.2
+
+* Increase performance
+
 ## 1.3.1
 
 * Update example app's description
