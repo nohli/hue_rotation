@@ -1,3 +1,7 @@
+## 1.3.3
+
+* Improve pub.dev metadata
+
 ## 1.3.2
 
 * Increase performance
