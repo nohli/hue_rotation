@@ -65,10 +65,12 @@ class _Box extends StatelessWidget {
       children: <Widget>[
         HueRotation(
           degrees: degrees,
-          child: Container(
+          child: SizedBox(
             width: size,
             height: size,
-            color: color,
+            child: ColoredBox(
+              color: color,
+            ),
           ),
         ),
         Text('$degrees'),
