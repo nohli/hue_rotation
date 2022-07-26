@@ -13,10 +13,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  static const Color _color = Colors.blue;
+
   @override
   Widget build(BuildContext context) {
-    const Color color = Colors.blue;
-
     return MaterialApp(
       home: Scaffold(
         body: Column(
@@ -28,12 +28,12 @@ class _MyAppState extends State<MyApp> {
                 spacing: 10,
                 children: const <Widget>[
                   // https://daddycoding.com/2020/03/30/swiftui-huerotation/
-                  _Box(color: color, degrees: -45),
-                  _Box(color: color, degrees: 0),
-                  _Box(color: color, degrees: 45),
-                  _Box(color: color, degrees: 90),
-                  _Box(color: color, degrees: 180),
-                  _Box(color: color, degrees: 360),
+                  _Box(color: _color, degrees: -45),
+                  _Box(color: _color, degrees: 0),
+                  _Box(color: _color, degrees: 45),
+                  _Box(color: _color, degrees: 90),
+                  _Box(color: _color, degrees: 180),
+                  _Box(color: _color, degrees: 360),
                 ],
               ),
             ),
@@ -48,14 +48,14 @@ class _MyAppState extends State<MyApp> {
 
 class _Box extends StatelessWidget {
   const _Box({
-    required this.color,
     required this.degrees,
+    required this.color,
     this.size = 40,
     Key? key,
   }) : super(key: key);
 
-  final Color color;
   final num degrees;
+  final Color color;
   final double size;
 
   @override
@@ -65,7 +65,11 @@ class _Box extends StatelessWidget {
       children: <Widget>[
         HueRotation(
           degrees: degrees,
-          child: Container(width: size, height: size, color: color),
+          child: Container(
+            width: size,
+            height: size,
+            color: color,
+          ),
         ),
         Text('$degrees'),
       ],
@@ -80,39 +84,43 @@ class _AnimatedBox extends StatefulWidget {
 
 class _AnimatedBoxState extends State<_AnimatedBox>
     with SingleTickerProviderStateMixin {
-  late final AnimationController controller;
-  late final CurvedAnimation animation;
-  late final Animation<double> rotation;
+  late final AnimationController _controller;
+  late final CurvedAnimation _animation;
+  late final Animation<double> _rotation;
+
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(
+    _controller = AnimationController(
       duration: const Duration(seconds: 8),
       vsync: this,
     );
-    animation = CurvedAnimation(parent: controller, curve: Curves.easeInOut);
-    rotation = Tween<double>(begin: 0, end: 1).animate(animation);
-    rotation.addListener(() {
-      if (mounted) setState(() {});
-    });
-    controller.repeat();
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+    _rotation = Tween<double>(begin: 0, end: 1).animate(_animation);
+    _controller.repeat();
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    _animation.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return RotationTransition(
-      turns: rotation,
-      child: _Box(
-        color: Colors.blue,
-        degrees: (rotation.value * 360).round(),
-        size: 120,
-      ),
+    return AnimatedBuilder(
+      animation: _rotation,
+      builder: (context, _) {
+        return RotationTransition(
+          turns: _rotation,
+          child: _Box(
+            degrees: (_rotation.value * 360).round(),
+            color: Colors.blue,
+            size: 120,
+          ),
+        );
+      },
     );
   }
 }
