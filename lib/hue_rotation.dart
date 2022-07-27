@@ -22,35 +22,37 @@ class HueRotation extends StatelessWidget {
   /// The [child] widget whose color to be manipulated.
   final Widget child;
 
+  static const _matrix1 = [
+    0.2127, 0.7152, 0.0722, //
+    0.2127, 0.7152, 0.0722,
+    0.2127, 0.7152, 0.0722,
+  ];
+
+  static const _matrix2 = [
+    0.7873, -0.7152, -0.0722, //
+    -0.2127, 0.2845, -0.0722,
+    -0.2127, -0.7152, 0.9278,
+  ];
+
+  static const _matrix3 = [
+    -0.2127, -0.7152, 0.9278, //
+    0.143, 0.140, -0.283,
+    -0.7873, 0.7152, 0.0722,
+  ];
+
   @override
   Widget build(BuildContext context) {
     final double radians = degrees / 180 * pi;
     final double cosinus = cos(radians);
     final double sinus = sin(radians);
 
-    const List<double> matrix1 = <double>[
-      0.2127, 0.7152, 0.0722, //
-      0.2127, 0.7152, 0.0722,
-      0.2127, 0.7152, 0.0722,
-    ];
-    const List<double> matrix2 = <double>[
-      0.7873, -0.7152, -0.0722, //
-      -0.2127, 0.2845, -0.0722,
-      -0.2127, -0.7152, 0.9278,
-    ];
-    const List<double> matrix3 = <double>[
-      -0.2127, -0.7152, 0.9278, //
-      0.143, 0.140, -0.283,
-      -0.7873, 0.7152, 0.0722,
-    ];
-
     // https://www.w3.org/TR/filter-effects-1/#feColorMatrixElement
     double value(int position) =>
-        matrix1[position] +
-        cosinus * matrix2[position] +
-        sinus * matrix3[position];
+        _matrix1[position] +
+        cosinus * _matrix2[position] +
+        sinus * _matrix3[position];
 
-    final ColorFilter hueFilter = ColorFilter.matrix(<double>[
+    final ColorFilter hueFilter = ColorFilter.matrix([
       value(0), value(1), value(2), 0, 0, //
       value(3), value(4), value(5), 0, 0,
       value(6), value(7), value(8), 0, 0,
