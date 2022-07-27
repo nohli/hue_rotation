@@ -21,12 +21,12 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             Center(
               child: Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 10,
-                children: const <Widget>[
+                children: const [
                   // https://daddycoding.com/2020/03/30/swiftui-huerotation/
                   _Box(color: _color, degrees: -45),
                   _Box(color: _color, degrees: 0),
@@ -62,7 +62,7 @@ class _Box extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       alignment: Alignment.center,
-      children: <Widget>[
+      children: [
         HueRotation(
           degrees: degrees,
           child: SizedBox(
