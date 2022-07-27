@@ -1,3 +1,7 @@
+## 1.3.5
+
+* Improve example app
+
 ## 1.3.4
 
 * Improve pub.dev metadata
