@@ -1,4 +1,4 @@
-name: Check score
+name: Check pub score
 
 on:
   pull_request:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   check-score:
+    name: Check pub score
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
