@@ -1,3 +1,8 @@
+## 1.3.6
+
+* Add more GitHub Actions for checking code quality
+* Add dependabot
+
 ## 1.3.5
 
 * Improve example app
