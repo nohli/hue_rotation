@@ -22,11 +22,11 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
+            const Center(
               child: Wrap(
                 alignment: WrapAlignment.center,
                 spacing: 10,
-                children: const [
+                children: [
                   // https://daddycoding.com/2020/03/30/swiftui-huerotation/
                   _Box(color: _color, degrees: -45),
                   _Box(color: _color, degrees: 0),
