@@ -1,3 +1,7 @@
+## 1.3.8
+
+* Add topics to pubspec.yaml
+
 ## 1.3.7
 
 * Remove `pubspec.lock` from package
