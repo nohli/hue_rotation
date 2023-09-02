@@ -1,7 +1,7 @@
 ## 1.3.9
 
 * Maintenance release
-* Update gradle, kotlin, and flutter_lints versions
+* Update `gradle`, `kotlin`, and `flutter_lints`
 
 ## 1.3.8
 
