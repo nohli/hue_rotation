@@ -1,4 +1,4 @@
-package com.hue_rotation.example
+package com.huerotation.example
 
 import io.flutter.embedding.android.FlutterActivity
 
