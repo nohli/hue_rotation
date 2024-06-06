@@ -1,3 +1,8 @@
+## 1.3.10
+
+* Maintenance release
+* Upgrade Android dependencies (Gradle, AGP, Java, Kotlin) in example app
+
 ## 1.3.9
 
 * Maintenance release
