@@ -1,5 +1,3 @@
-library hue_rotation;
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -10,8 +8,8 @@ class HueRotation extends StatelessWidget {
   const HueRotation({
     required this.degrees,
     required this.child,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   /// [degrees] around the color circle the [child]'s color is adjusted.
   /// A value of 0 leaves the child unchanged.
