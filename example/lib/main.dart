@@ -6,7 +6,7 @@ void main() => runApp(const MyApp());
 ///
 class MyApp extends StatefulWidget {
   ///
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -51,8 +51,7 @@ class _Box extends StatelessWidget {
     required this.degrees,
     required this.color,
     this.size = 40,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final num degrees;
   final Color color;
