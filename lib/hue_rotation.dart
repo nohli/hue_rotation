@@ -1,5 +1,3 @@
-library hue_rotation;
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
