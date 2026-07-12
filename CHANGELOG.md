@@ -1,3 +1,7 @@
+## 2.0.1
+
+* Update the example Android toolchain to Android Gradle Plugin 9.1.1, Gradle 9.3.1, and Kotlin Gradle Plugin 2.2.20.
+* Apply the example app's Kotlin Gradle Plugin only when the host build still needs it.
 ## 2.0.0
 
 * Breaking: Flutter SDK constraint is now >=3.10.0 (Dart 3-only). Apps on older Flutter versions can’t upgrade.
