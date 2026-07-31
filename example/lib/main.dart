@@ -47,11 +47,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class _Box extends StatelessWidget {
-  const _Box({
-    required this.degrees,
-    required this.color,
-    this.size = 40,
-  });
+  const _Box({required this.degrees, required this.color, this.size = 40});
 
   final num degrees;
   final Color color;
@@ -67,9 +63,7 @@ class _Box extends StatelessWidget {
           child: SizedBox(
             width: size,
             height: size,
-            child: ColoredBox(
-              color: color,
-            ),
+            child: ColoredBox(color: color),
           ),
         ),
         Text('$degrees'),
