@@ -45,10 +45,7 @@ class HueRotation extends StatelessWidget {
     final double sinus = sin(radians);
 
     // https://www.w3.org/TR/filter-effects-1/#feColorMatrixElement
-    double value(int position) =>
-        _matrix1[position] +
-        cosinus * _matrix2[position] +
-        sinus * _matrix3[position];
+    double value(int position) => _matrix1[position] + cosinus * _matrix2[position] + sinus * _matrix3[position];
 
     final ColorFilter hueFilter = ColorFilter.matrix([
       value(0), value(1), value(2), 0, 0, //
