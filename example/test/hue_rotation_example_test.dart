@@ -18,9 +18,7 @@ void main() {
 
     await tester.pumpWidget(widget);
 
-    final elements = tester.elementList(
-      find.byElementType(SingleChildRenderObjectElement),
-    );
+    final elements = tester.elementList(find.byElementType(SingleChildRenderObjectElement));
 
     final coloredBoxes = elements
         .map((e) => e.renderObject)
