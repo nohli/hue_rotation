@@ -47,11 +47,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class _Box extends StatelessWidget {
-  const _Box({
-    required this.degrees,
-    required this.color,
-    this.size = 40,
-  });
+  const _Box({required this.degrees, required this.color, this.size = 40});
 
   final num degrees;
   final Color color;
@@ -67,9 +63,7 @@ class _Box extends StatelessWidget {
           child: SizedBox(
             width: size,
             height: size,
-            child: ColoredBox(
-              color: color,
-            ),
+            child: ColoredBox(color: color),
           ),
         ),
         Text('$degrees'),
@@ -83,8 +77,7 @@ class _AnimatedBox extends StatefulWidget {
   _AnimatedBoxState createState() => _AnimatedBoxState();
 }
 
-class _AnimatedBoxState extends State<_AnimatedBox>
-    with SingleTickerProviderStateMixin {
+class _AnimatedBoxState extends State<_AnimatedBox> with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final CurvedAnimation _animation;
   late final Animation<double> _rotation;
@@ -92,10 +85,7 @@ class _AnimatedBoxState extends State<_AnimatedBox>
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      duration: const Duration(seconds: 8),
-      vsync: this,
-    );
+    _controller = AnimationController(duration: const Duration(seconds: 8), vsync: this);
     _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
     _rotation = Tween<double>(begin: 0, end: 1).animate(_animation);
     _controller.repeat();
@@ -115,11 +105,7 @@ class _AnimatedBoxState extends State<_AnimatedBox>
       builder: (context, _) {
         return RotationTransition(
           turns: _rotation,
-          child: _Box(
-            degrees: (_rotation.value * 360).round(),
-            color: Colors.blue,
-            size: 120,
-          ),
+          child: _Box(degrees: (_rotation.value * 360).round(), color: Colors.blue, size: 120),
         );
       },
     );
