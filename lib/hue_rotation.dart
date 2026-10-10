@@ -2,7 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-///
+/// Applies a hue rotation matrix to every pixel in the child subtree.
+/// Alpha is preserved; RGB output outside the display gamut is clamped.
 class HueRotation extends StatelessWidget {
   /// Applies a hue rotation on the color of the [child].
   const HueRotation({
@@ -13,8 +14,8 @@ class HueRotation extends StatelessWidget {
 
   /// [degrees] around the color circle the [child]'s color is adjusted.
   /// A value of 0 leaves the child unchanged.
-  /// A value of 180 paints the complementary color.
-  /// https://en.wikipedia.org/wiki/Color_wheel
+  /// A value of 180 performs a half-turn of the matrix hue rotation.
+  /// This differs from RGB inversion and HSV hue adjustment.
   final num degrees;
 
   /// The [child] widget whose color to be manipulated.

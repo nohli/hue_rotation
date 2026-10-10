@@ -1,3 +1,8 @@
+## Unreleased
+
+* Clarify matrix hue rotation behavior and add rendered-color regression coverage.
+* Allow development dependencies to resolve on the declared Flutter 3.10 minimum.
+
 ## 2.0.1
 
 * Remove the Android example's explicit Kotlin Gradle Plugin and update it to
