@@ -29,7 +29,7 @@ class HueRotation extends StatelessWidget {
 
   static const _matrix2 = [
     0.7873, -0.7152, -0.0722, //
-    -0.2127, 0.2845, -0.0722,
+    -0.2127, 0.2848, -0.0722,
     -0.2127, -0.7152, 0.9278,
   ];
 

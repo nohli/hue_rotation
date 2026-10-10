@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Fix green-channel attenuation at zero degrees.
+
 * Clarify matrix hue rotation behavior and add rendered-color regression coverage.
 * Allow development dependencies to resolve on the declared Flutter 3.10 minimum.
 

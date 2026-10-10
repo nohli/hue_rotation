@@ -6,6 +6,33 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hue_rotation/hue_rotation.dart';
 
 void main() {
+  testWidgets('zero degrees preserves every channel with an identity filter', (tester) async {
+    await tester.pumpWidget(const HueRotation(degrees: 0, child: SizedBox()));
+    expect(
+        tester.widget<ColorFiltered>(find.byType(ColorFiltered)).colorFilter,
+        const ColorFilter.matrix(<double>[
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+        ]));
+  });
   final cases = <num, List<int>>{
     0: [255, 0, 0, 255],
     90: [0, 91, 0, 255],
