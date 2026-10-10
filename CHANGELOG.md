@@ -1,10 +1,12 @@
 ## 2.0.2
 
-* Fix green-channel attenuation at zero degrees.
-* Clarify matrix hue rotation behavior and add rendered-color regression coverage.
+* Fix green-channel attenuation so zero-degree rotation preserves the input color.
+* Clarify matrix hue rotation, including why 180 degrees differs from RGB
+  inversion, and add rendered-color regression coverage.
 * Allow development dependencies to resolve on the declared Flutter 3.10 minimum.
 * Keep the example's static and animated colors reachable on short screens.
-* Align the iOS example runner with its existing Flutter 3.47 requirement.
+* Update the iOS example to the scene lifecycle and iOS 15 deployment target
+  required by its existing Flutter 3.47 minimum.
 
 ## 2.0.1
 
