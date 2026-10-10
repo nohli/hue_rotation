@@ -4,6 +4,7 @@
 * Clarify matrix hue rotation behavior and add rendered-color regression coverage.
 * Allow development dependencies to resolve on the declared Flutter 3.10 minimum.
 * Keep the example's static and animated colors reachable on short screens.
+* Align the iOS example runner with its existing Flutter 3.47 requirement.
 
 ## 2.0.1
 
