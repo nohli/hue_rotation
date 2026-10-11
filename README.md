@@ -1,6 +1,24 @@
 # hue_rotation
 
-Apply a hue rotation to any Flutter widget subtree using a color matrix. Requires Flutter 3.47 or newer.
+Apply a hue rotation to any Flutter widget subtree using a color matrix.
+
+## Installation
+
+**Flutter 3.47+**
+
+```yaml
+dependencies:
+  hue_rotation: ^3.0.0
+```
+
+**Flutter 3.10–<3.47**
+
+```yaml
+dependencies:
+  hue_rotation: ^2.0.1
+```
+
+## Usage
 
 ```dart
 import 'package:flutter/material.dart';
@@ -18,7 +36,7 @@ Update `degrees` from an animation to animate the filter. See the [example](exam
 
 ## Upgrading to 3.0.0
 
-Upgrade Flutter to 3.47 or newer. The widget API is unchanged; apps using older Flutter can continue with 2.x. Mobile host apps follow Flutter’s minimums (iOS 15 and Android API 24 on Flutter 3.47), or any higher minimum required by the app.
+The widget API is unchanged. Mobile host apps follow Flutter’s minimums (iOS 15 and Android API 24 on Flutter 3.47), or any higher minimum required by the app.
 
 ## HueRotation in action
 
