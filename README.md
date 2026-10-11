@@ -1,6 +1,6 @@
 # hue_rotation
 
-Apply a hue rotation to any Flutter widget subtree using a color matrix. Requires Flutter 3.47 or newer and Dart 3.13 or newer.
+Apply a hue rotation to any Flutter widget subtree using a color matrix. Requires Flutter 3.47 or newer.
 
 ```dart
 import 'package:flutter/material.dart';
