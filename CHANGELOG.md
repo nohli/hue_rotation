@@ -1,3 +1,8 @@
+## 3.0.0
+
+* **Breaking:** Require Flutter 3.47 or newer and Dart 3.13 or newer.
+  Applications using older Flutter can continue with the previous major version.
+
 ## 2.0.2
 
 * Fix green-channel attenuation so zero-degree rotation preserves the input color.

@@ -6,11 +6,7 @@ import 'package:flutter/material.dart';
 /// Alpha is preserved; RGB output outside the display gamut is clamped.
 class HueRotation extends StatelessWidget {
   /// Applies a hue rotation on the color of the [child].
-  const HueRotation({
-    required this.degrees,
-    required this.child,
-    super.key,
-  });
+  const HueRotation({required this.degrees, required this.child, super.key});
 
   /// [degrees] around the color circle the [child]'s color is adjusted.
   /// A value of 0 leaves the child unchanged.
