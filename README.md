@@ -1,23 +1,22 @@
-## Getting Started
+# hue_rotation
 
-[Installation](https://pub.dev/packages/hue_rotation/install)
+Apply a hue rotation to any Flutter widget subtree using a color matrix. Requires Flutter 3.10 or newer.
 
-[Example Code](https://pub.dev/packages/hue_rotation/example)
+```dart
+import 'package:flutter/material.dart';
+import 'package:hue_rotation/hue_rotation.dart';
 
-## About
+const HueRotation(
+  degrees: 90,
+  child: Icon(Icons.favorite, color: Colors.blue, size: 64),
+)
+```
 
-* This widget performs a hue rotation on the child's color:
-* `Degrees` defines the number of degrees around the color circle the color will be adjusted.
-* A value of 0 leaves the color unchanged.
-* A value of 180 paints the complementary color.
-* The manipulated color in the example is `Colors.blue`.
+`degrees` accepts positive, negative, and fractional angles. Zero and full turns leave colors unchanged. Alpha is preserved. A half-turn (`180`) uses the [hue rotation matrix](https://www.w3.org/TR/filter-effects-1/#feColorMatrixElement); it is not RGB inversion or an HSV hue adjustment. Output channels outside the display gamut are clamped, so brightness and saturation can appear different.
 
-## HueRotation in Action
+Update `degrees` from an animation to animate the filter. See the [example](example/lib/main.dart) for static and animated rotations of `Colors.blue`.
 
-![Screenrecording](https://raw.githubusercontent.com/nohli/hue_rotation/master/assets/preview.gif)
-![Screenrecording](https://raw.githubusercontent.com/nohli/hue_rotation/master/assets/breathe.gif)
+## HueRotation in action
 
-## Todo
-
-* Add feature requests
-* Merge your pull requests
+![Hue rotation preview](https://raw.githubusercontent.com/nohli/hue_rotation/main/assets/preview.gif)
+![Animated hue rotation](https://raw.githubusercontent.com/nohli/hue_rotation/main/assets/breathe.gif)

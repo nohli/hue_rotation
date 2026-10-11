@@ -1,3 +1,10 @@
+## 2.0.2
+
+* Fix color changes at zero-degree rotation.
+* Clarify why a 180-degree rotation differs from RGB inversion.
+* Keep all example colors reachable on short screens.
+* Update the iOS example for Flutter 3.47+.
+
 ## 2.0.1
 
 * Remove the Android example's explicit Kotlin Gradle Plugin and update it to

@@ -1,16 +1,14 @@
-# hue_rotation_example
+# hue_rotation example
 
-Demonstrates how to use the hue_rotation package.
+Shows six static hue rotations and an animated rotation of a blue square. The page scrolls on short screens so every color remains reachable.
 
-## Getting Started
+This native example requires Flutter 3.47 or newer. Its iOS runner requires iOS 15 or newer. The package itself supports Flutter 3.10 or newer.
 
-This project is a starting point for a Flutter application.
+From this directory, use the installed FVM SDK:
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+fvm flutter pub get
+fvm flutter run -d <device-id>
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run the example checks with `fvm flutter test` and `fvm flutter analyze`.
