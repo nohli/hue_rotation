@@ -1,12 +1,9 @@
 ## 2.0.2
 
-* Fix green-channel attenuation so zero-degree rotation preserves the input color.
-* Clarify matrix hue rotation, including why 180 degrees differs from RGB
-  inversion, and add rendered-color regression coverage.
-* Allow development dependencies to resolve on the declared Flutter 3.10 minimum.
-* Keep the example's static and animated colors reachable on short screens.
-* Update the iOS example to the scene lifecycle and iOS 15 deployment target
-  required by its existing Flutter 3.47 minimum.
+* Fix color changes at zero-degree rotation.
+* Clarify why a 180-degree rotation differs from RGB inversion.
+* Keep all example colors reachable on short screens.
+* Update the iOS example for Flutter 3.47+.
 
 ## 2.0.1
 
