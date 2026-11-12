@@ -20,8 +20,10 @@ dependencies:
 
 ## Usage
 
+The example uses Material widgets. Add `material_ui: ^1.11.0` to your app dependencies.
+
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:hue_rotation/hue_rotation.dart';
 
 const HueRotation(
