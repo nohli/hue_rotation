@@ -1,14 +1,13 @@
 ## 3.0.0
 
-* **Breaking:** Require Flutter 3.47+. Use 2.0.2 with Flutter 3.10–<3.47.
+* **Breaking:** Requires Flutter 3.47 or later; no Dart API changes
 
 ## 2.0.2
 
-* Fix color changes at zero-degree rotation.
-* Replace deprecated Flutter imports while keeping Flutter 3.10 support.
-* Clarify why a 180-degree rotation differs from RGB inversion.
-* Keep all example colors reachable on short screens.
-* Update the iOS example for Flutter 3.47+.
+* Fix slight color changes when `degrees` is `0`
+* Replace the deprecated Material import with `package:flutter/widgets.dart`, keeping Flutter 3.10 support
+* Document that hue rotation uses a color matrix rather than RGB inversion
+* Keep all example colors reachable on short screens
 
 ## 2.0.1
 
