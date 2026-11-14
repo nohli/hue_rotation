@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:hue_rotation/hue_rotation.dart';
 
 void main() => runApp(const MyApp());

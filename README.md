@@ -3,12 +3,16 @@
 Apply a hue rotation to any Flutter widget subtree using a color matrix. Requires Flutter 3.10 or newer.
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hue_rotation/hue_rotation.dart';
 
 const HueRotation(
   degrees: 90,
-  child: Icon(Icons.favorite, color: Colors.blue, size: 64),
+  child: SizedBox(
+    width: 64,
+    height: 64,
+    child: ColoredBox(color: Color(0xff2196f3)),
+  ),
 )
 ```
 

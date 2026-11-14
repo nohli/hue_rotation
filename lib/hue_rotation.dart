@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 /// Applies a hue rotation matrix to every pixel in the child subtree.
 /// Alpha is preserved; RGB output outside the display gamut is clamped.
