@@ -2,7 +2,7 @@
 
 Shows six static hue rotations and an animated rotation of a blue square. The page scrolls on short screens so every color remains reachable.
 
-This native example requires Flutter 3.47 or newer. Its iOS runner requires iOS 15 or newer. The package itself supports Flutter 3.10 or newer.
+The example and package require Flutter 3.47 or newer. Native example builds target iOS 15+ and Android API 24+.
 
 From this directory, use the installed FVM SDK:
 
