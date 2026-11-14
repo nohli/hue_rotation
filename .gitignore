@@ -22,8 +22,6 @@ migrate_working_dir/
 /pubspec.lock
 **/doc/api/
 .dart_tool/
+/.fvm/
 .packages
 build/
-
-# Generated FVM SDK links
-.fvm/

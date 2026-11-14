@@ -15,20 +15,22 @@ dependencies:
 
 ```yaml
 dependencies:
-  hue_rotation: ^2.0.1
+  hue_rotation: ^2.0.2
 ```
 
 ## Usage
 
-The example uses Material widgets. Add `material_ui: ^1.11.0` to your app dependencies.
-
 ```dart
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hue_rotation/hue_rotation.dart';
 
 const HueRotation(
   degrees: 90,
-  child: Icon(Icons.favorite, color: Colors.blue, size: 64),
+  child: SizedBox(
+    width: 64,
+    height: 64,
+    child: ColoredBox(color: Color(0xff2196f3)),
+  ),
 )
 ```
 
