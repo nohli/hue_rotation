@@ -19,27 +19,37 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Center(
-              child: Wrap(
-                alignment: WrapAlignment.center,
-                spacing: 10,
-                children: [
-                  // https://daddycoding.com/2020/03/30/swiftui-huerotation/
-                  _Box(color: _color, degrees: -45),
-                  _Box(color: _color, degrees: 0),
-                  _Box(color: _color, degrees: 45),
-                  _Box(color: _color, degrees: 90),
-                  _Box(color: _color, degrees: 180),
-                  _Box(color: _color, degrees: 360),
-                ],
+        body: SafeArea(
+          child: LayoutBuilder(
+            builder: (context, constraints) => SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Center(
+                      child: Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 10,
+                        children: [
+                          // https://daddycoding.com/2020/03/30/swiftui-huerotation/
+                          _Box(color: _color, degrees: -45),
+                          _Box(color: _color, degrees: 0),
+                          _Box(color: _color, degrees: 45),
+                          _Box(color: _color, degrees: 90),
+                          _Box(color: _color, degrees: 180),
+                          _Box(color: _color, degrees: 360),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 50),
+                    _AnimatedBox(),
+                  ],
+                ),
               ),
             ),
-            const SizedBox(height: 50),
-            _AnimatedBox(),
-          ],
+          ),
         ),
       ),
     );
@@ -100,14 +110,21 @@ class _AnimatedBoxState extends State<_AnimatedBox> with SingleTickerProviderSta
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _rotation,
-      builder: (context, _) {
-        return RotationTransition(
-          turns: _rotation,
-          child: _Box(degrees: (_rotation.value * 360).round(), color: Colors.blue, size: 120),
-        );
-      },
+    // Reserve room for the rotating square's diagonal
+    return SizedBox(
+      width: 180,
+      height: 180,
+      child: Center(
+        child: AnimatedBuilder(
+          animation: _rotation,
+          builder: (context, _) {
+            return RotationTransition(
+              turns: _rotation,
+              child: _Box(degrees: (_rotation.value * 360).round(), color: Colors.blue, size: 120),
+            );
+          },
+        ),
+      ),
     );
   }
 }
